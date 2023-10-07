@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-base: #101418;
+  --text-color-base: #fff;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-base);
+}
+
+/*global styles for mui-chart-x  */
+.MuiChartsAxis-line {
+  stroke: var(--text-color-base);
+}
+& .MuiChartsAxis-label {
+  fill: var(--text-color-base);
+}
+& .MuiChartsAxis-tickLabel {
+  fill: var(--text-color-base);
+}
+& .MuiChartsAxis-tick {
+  stroke: var(--text-color-base);
 }
